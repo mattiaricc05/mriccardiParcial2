@@ -1,3 +1,34 @@
-<p>
-  pais-detail works!
-</p>
+<div class="container-fluid">
+  <p class="h3 p-3">{{ paisDetail?.name }}</p>
+  <div class="row">
+    <div class="col-2">
+      <div class="thumb">
+        <img
+          class="img-fluid"
+          src="{{ paisDetail?.flag }}"
+          alt="{{ paisDetail?.name }}"
+        />
+      </div>
+    </div>
+    <div class="col">
+      <dl>
+        <dt>Nombre</dt>
+        <dd>{{ paisDetail?.name }}</dd>
+
+        <hr />
+
+        <dt>Capital</dt>
+        <dd>{{ paisDetail?.capital }}</dd>
+
+        <hr />
+
+        <dt>Descripción</dt>
+        <dd class="caption">{{ paisDetail?.description}}</dd>
+
+        <hr />
+
+        <dt class="bold">Formation Year</dt>
+        <dd>{{ paisDetail?.formation_year }}</dd>
+      </dl>
+    </div>
+</div>

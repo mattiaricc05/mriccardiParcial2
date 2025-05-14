@@ -1,3 +1,22 @@
-<p>
-  pais-list works!
-</p>
+<div *ngFor = "let pais of paises">
+  <div>
+    {{pais.id}}
+  </div>
+  <div>
+    {{pais.name}}
+  </div>
+  <div>
+    <img 
+    class="card-img-top"
+    src="{{pais.flag}}"
+    alt="{{pais.name}}"
+    (click)="onSelected(pais)"/>
+  </div>
+  <div>
+    {{pais.formation_year}}
+  </div>
+</div>
+
+<div class="selected-pais rounded" *ngIf="selected">
+      <app-pais-detail [paisDetail]="selectedPais"></app-pais-detail>
+</div>
