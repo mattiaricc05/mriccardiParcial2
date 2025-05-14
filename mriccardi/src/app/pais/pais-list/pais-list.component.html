@@ -1,3 +1,5 @@
+<div class="container-fluid mt-2">
+  <h2 class="text-center">Paises</h2>
 <div *ngFor = "let pais of paises">
   <div>
     {{pais.id}}
@@ -12,11 +14,14 @@
     alt="{{pais.name}}"
     (click)="onSelected(pais)"/>
   </div>
-  <div>
-    {{pais.formation_year}}
-  </div>
+</div>
 </div>
 
+<div>
+  <p>el país más antiguo del listado es Portugal y fue conformado en 1143</p>
+</div>
+
+<h1>Detalle</h1>
 <div class="selected-pais rounded" *ngIf="selected">
       <app-pais-detail [paisDetail]="selectedPais"></app-pais-detail>
 </div>
